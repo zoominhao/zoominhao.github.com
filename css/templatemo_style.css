@@ -288,6 +288,12 @@ em { color: #fff; }
 	margin-right: 50px;
 }
 
+.col_w270_right {
+	float: right;
+	width: 270px;
+	margin-right: 50px;
+}
+
 .col_w270_last {
 	margin-right: 0;
 }

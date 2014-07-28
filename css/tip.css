@@ -1,0 +1,5 @@
+a#tip {position:relative;left:1px; font-weight:bold;}
+a#tip:link,a#tip:hover {text-decoration:none;color:#000;display:block}
+a#tip span {display:none;text-decoration:none;}
+a#tip:visited {color:#000;text-decoration:underline;}
+a#tip:hover #tip_info {display:block;border:1px solid #F96;background:#000000;padding:10px 20px;position:absolute;top:50px;left:2px;color:#FF9933}
