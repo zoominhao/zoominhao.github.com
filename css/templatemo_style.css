@@ -10,7 +10,7 @@ body {
 	font-size: 13px;
 	line-height:1.5em; 
 	background-color: #fff;
-	background-image: url(images/templatemo_body.jpg);
+	background-image: url(../images/templatemo_body.jpg);
 	background-repeat: repeat;
 }
 
@@ -93,7 +93,7 @@ em { color: #fff; }
 #templatemo_header_wrapper {
 	width: 100%;
 	height: 130px;
-	background: url(images/templatemo_header.png) repeat-x bottom;
+	background: url(../images/templatemo_header.png) repeat-x bottom;
 }
 
 #templatemo_header {
@@ -182,7 +182,7 @@ em { color: #fff; }
 	width: 100%;
 	height: 365px;
 	margin: 0 auto;
-	background: url(images/templatemo_featured_slider.png) repeat-x top;
+	background: url(../images/templatemo_featured_slider.png) repeat-x top;
 }
 
 #templatemo_featured_content {
@@ -199,14 +199,14 @@ em { color: #fff; }
 	left: 30px;
 	width: 91px;
 	height: 33px;
-	background: url(images/templatemo_slider_nav_bg.png) no-repeat;
+	background: url(../images/templatemo_slider_nav_bg.png) no-repeat;
 }
 
 #templatemo_top_wrapper {
 	clear: both;
 	width: 100%;
 	margin: 0 auto;
-	background: url(images/templatemo_featured_slider.png) repeat-x bottom;
+	background: url(../images/templatemo_featured_slider.png) repeat-x bottom;
 
 }
 
@@ -237,20 +237,20 @@ em { color: #fff; }
 
 .content_box {
 	padding: 20px 30px;
-	background: url(images/content.png) repeat-y;
+	background: url(../images/content.png) repeat-y;
 }
 
 .content_box_top {
 	width: 590px;
 	height: 10px;
-	background: url(images/content_top.png) no-repeat;
+	background: url(../images/content_top.png) no-repeat;
 }
 
 .content_box_bottom {
 	width: 590px;
 	height: 10px;
 	margin-bottom: 20px;
-	background: url(images/content_bottom.png) no-repeat;
+	background: url(../images/content_bottom.png) no-repeat;
 }
 
 #sidebar_wrapper {
@@ -260,20 +260,20 @@ em { color: #fff; }
 
 .sidebar {
 	padding: 20px 30px;
-	background: url(images/sidebar.png) repeat-y;
+	background: url(../images/sidebar.png) repeat-y;
 }
 
 .sidebar_top {
 	width: 300px;
 	height: 10px;
-	background: url(images/sidebar_top.png) no-repeat;
+	background: url(../images/sidebar_top.png) no-repeat;
 }
 
 .sidebar_bottom {
 	width: 300px;
 	height: 10px;
 	margin-bottom: 20px;
-	background: url(images/sidebar_bottom.png) no-repeat;
+	background: url(../images/sidebar_bottom.png) no-repeat;
 }
 
 .col_w590 {
@@ -332,7 +332,7 @@ em { color: #fff; }
 	padding-top: 10px;
 	font-size: 16px;
 	font-weight: bold;
-	background: url(images/templatemo_comment.png) no-repeat;
+	background: url(../images/templatemo_comment.png) no-repeat;
 }
 
 .post_section .more a {
@@ -563,7 +563,7 @@ em { color: #fff; }
 
 #templatemo_footer_wrapper {
 	width: 100%;
-	background: url(images/templatemo_footer.png) repeat-x top;
+	background: url(../images/templatemo_footer.png) repeat-x top;
 	border-bottom: 1px solid #5e5544;
 }
 
