@@ -17,7 +17,8 @@
 		radius : 4,
 		close_all : '.piro_close,.piro_overlay',
 		slideShow : null,
-		slideSpeed : null //slideshow duration in seconds
+		slideSpeed : null, //slideshow duration in seconds
+		pironame: 'pirobox'
 		}, opt);		
 		function start_pirobox() {
 			var corners = 
@@ -88,7 +89,7 @@
 				}						
 			$(my_gall_classes).each(function(rev){this.rev = rev+0});
 			var piro_gallery = $(my_gall_classes);
-			var piro_single = $('a.pirobox');
+			var piro_single = $('a.'+opt.pironame);
 			$.fn.fixPNG = function() {
 				return this.each(function () {
 					var image = $(this).css('backgroundImage');

@@ -16,9 +16,10 @@
 <!--////// INCLUDE THE JS AND PIROBOX OPTION IN YOUR HEADER  \\\\\\\-->
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/piroBox.1_2.js"></script>
+<script type="text/javascript" src="js/htmlstr.js"></script>
+<script type="text/javascript" src="js/split.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
-
 	$().piroBox({
 			my_speed: 600, //animation speed
 			bg_alpha: 0.5, //background opacity
@@ -28,11 +29,9 @@ $(document).ready(function() {
 			pirobox_prev : 'piro_prev',// Nav buttons -> piro_prev == inside piroBox , piro_prev_out == outside piroBox
 			close_all : '.piro_close',// add class .piro_overlay(with comma)if you want overlay click close piroBox
 			slideShow : 'slideshow', // just delete slideshow between '' if you don't want it.
-			slideSpeed : 4, //slideshow duration in seconds(3 to 6 Recommended)
-			pironame: 'pirobox'
+			slideSpeed : 4 //slideshow duration in seconds(3 to 6 Recommended)
 	});
 });
-
 </script>
 <!--////// END  \\\\\\\-->
 
@@ -88,16 +87,92 @@ $(document).ready(function() {
     	
         <div class="content_box_top"></div>
         <div class="content_box">
-        <div id="gallery"></div>   
+        
+        
+        	<div id="gallery">
+            <ul>
+               	<li>
+                	<div class="left">
+                    	<a href="images/gallery/onlineexam_b.jpg" class="pirobox" title="College Sprout Fund Project"><img src="images/gallery/onlineexam_a.jpg" alt="" /></a>
+                    </div>
+                    <div class="right">
+                        <h5>College Sprout Fund Project</h5>
+                        <p>Online examination system for software academy of SCU,mainly related to web MVC architecture, MySQL, JAVA. <a href="http://swjx.scu.edu.cn:8001/onlineexam/" target="_blank">link</a> .</p>
+                        <div class="button"><a href="#">Visit site <span>&raquo;</span></a> </div>
+                    </div>
+                    <div class="cleaner"></div>
+                </li>
+                
+                <li>
+                    <div class="left">
+                    	<a href="images/gallery/innovation_b.jpg" class="pirobox" title="National College Innovation Competition"><img src="images/gallery/innovation_a.jpg" alt="" /></a>
+                    </div>
+                    <div class="right">
+                      <h5>National College Innovation Competition</h5>
+                      <p>Develop Smart Campus System with Zigbee-based Internet of Things technology , and received the National Award. Main parts: Resource Monitoring, Anti-Theft
+                         ,Fire Preventing, Personnel Positioning and so on. Based on C/C++, ActionScript, Java and JS.</p>
+                       <div class="button"><a href="#">Visit site <span>&raquo;</span></a> </div>
+                    </div>
+               		<div class="cleaner"></div>
+                </li>
+                
+                <li>
+                	<div class="left">
+                		<a href="images/gallery/image_03_b.jpg" class="pirobox" title="Project 1"><img src="images/gallery/image_03.jpg" alt="" /></a>
+                    </div>
+                    <div class="right">
+                    	<h5>3D Synopsis</h5>
+	                  <p>Etiam eu ipsum a arcu sodales consequat sit amet at orci. Nulla in luctus elit.</p>
+        		        <div class="button"><a href="#">Visit site <span>&raquo;</span></a> </div>
+                  </div>
+                     <div class="cleaner"></div>
+                </li>
+                
+                <li>
+                	<div class="left">
+               			<a href="images/gallery/image_04_b.jpg" class="pirobox" title="Project 1"><img src="images/gallery/image_04.jpg" alt="" /></a>
+                    </div>
+					<div class="right">
+                    	<h5>Shenzhen Baveda Corporation StreetView Project</h5>
+                		<p>Divamus interdum, tortor at pellentesque pulvinar, diam quam blandit nulla.</p>
+		              <div class="button"><a href="#">Visit site <span>&raquo;</span></a> </div>
+                    </div>
+                    <div class="cleaner"></div>
+                </li>
+                
+                <li>
+                	<div class="left">
+               			<a href="images/gallery/image_05_b.jpg" class="pirobox" title="Project 1"><img src="images/gallery/image_05.jpg" alt="" /></a>
+                    </div>
+					<div class="right">
+                    	<h5>3D Synopsis</h5>
+                		<p></p>
+		                <div class="button"><a href="#">Visit site <span>&raquo;</span></a> </div>
+                    </div>
+                    <div class="cleaner"></div>
+                </li>
+                
+                <li>
+                	<div class="left">
+               			<a href="images/gallery/image_06_b.jpg" class="pirobox" title="Project 1"><img src="images/gallery/image_06.jpg" alt="" /></a>
+                    </div>
+					<div class="right">
+                    	<h5>Intrinsic Symmetry</h5>
+                		<p>Enhancing the self-symmetry of a shape is of fundamental aesthetic virtue. In this work, we are interested in
+                         recovering the aesthetics of intrinsic symmetries, where an asymmetric shape is symmetrized while keeping its
+                         general pose and perceived dynamics. Submitted on Siggraph Asia 2014.</p>
+		                <div class="button"><a href="#">Visit site <span>&raquo;</span></a> </div>
+                    </div>
+                    <div class="cleaner"></div>
+                </li>
+			</ul>
+        
         </div>
-		<div class="content_box_bottom"></div>
+            
+        </div><div class="content_box_bottom"></div>
 
 	</div>
-
-    <script type="text/javascript" src="js/htmlstr.js"></script>
-    <script type="text/javascript" src="js/split.js"></script>
-	<script type="text/javascript" >setpage(); //调用分页</script> 
-
+    
 <div id="sidebar_wrapper">
 
 	<div class="sidebar_top"></div>
