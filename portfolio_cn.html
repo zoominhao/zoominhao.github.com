@@ -8,17 +8,43 @@
 <meta name="description" content="homepage for zoomin, 2014/07/28" />
 <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
 <link href="css/tip.css" rel="stylesheet" type="text/css" />
-<link href="css/jquery.ennui.contentslider.css" rel="stylesheet" type="text/css" media="screen,projection" />
+<!--////// CHOOSE ONE OF THE 3 PIROBOX STYLES  \\\\\\\-->
+<link href="css_pirobox/white/style.css" media="screen" title="shadow" rel="stylesheet" type="text/css" />
+<!--<link href="css_pirobox/white/style.css" media="screen" title="white" rel="stylesheet" type="text/css" />
+<link href="css_pirobox/black/style.css" media="screen" title="black" rel="stylesheet" type="text/css" />-->
+<!--////// END  \\\\\\\-->
+
+<!--////// INCLUDE THE JS AND PIROBOX OPTION IN YOUR HEADER  \\\\\\\-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/piroBox.1_2.js"></script>
 <script type="text/javascript">
-	function changeLanguage()
-	{
-		window.location.href = "resume_cn.html";
-	}
+$(document).ready(function() {
+
+	$().piroBox({
+			my_speed: 600, //animation speed
+			bg_alpha: 0.5, //background opacity
+			radius: 4, //caption rounded corner
+			scrollImage : false, // true == image follows the page, false == image remains in the same open position
+			pirobox_next : 'piro_next', // Nav buttons -> piro_next == inside piroBox , piro_next_out == outside piroBox
+			pirobox_prev : 'piro_prev',// Nav buttons -> piro_prev == inside piroBox , piro_prev_out == outside piroBox
+			close_all : '.piro_close',// add class .piro_overlay(with comma)if you want overlay click close piroBox
+			slideShow : 'slideshow', // just delete slideshow between '' if you don't want it.
+			slideSpeed : 4, //slideshow duration in seconds(3 to 6 Recommended)
+			pironame: 'pirobox'
+	});
+});
+function changeLanguage()
+{
+	window.location.href = "portfolio.html";
+}
+
 </script>
+<!--////// END  \\\\\\\-->
+
 </head>
 <body> 
-<div style="z-index:99; margin-right:100px;">
-		<img src="images/chinese.jpg" alt="chinese" style="width:2%; height:2%;  margin-top:70px; cursor:pointer;" onclick="changeLanguage();" align="right";  /> 
+  <div style="z-index:99; margin-right:100px;">
+		<img src="images/english.jpg" alt="english" style="width:2%; height:2%;  margin-top:70px; cursor:pointer;" onclick="changeLanguage();" align="right";  /> 
 		</div>
 <div id="templatemo_header_wrapper">
     <div id="templatemo_header">
@@ -27,7 +53,7 @@
             
             <div id="site_title">
                 
-                <a href="http://zoominhao.github.com"><img src="images/zoomin.png" alt="zhuming hao" height="70%" width="70%"/><span>Zoomin(Zhuming) Hao</span></a>
+                 <a href="http://zoominhao.github.com"><img src="images/zoomin.png" alt="zhuming hao" height="70%" width="70%"/><span>Zoomin(Zhuming) Hao</span></a>
                 
             </div> <!-- end of site_title -->
     
@@ -38,10 +64,10 @@
             <div id="templatemo_menu">
                 
                 <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li class="last"><a href="resume.html">Resume</a></li>
+                    <li><a href="home_cn.html">主页</a></li>
+                    <li><a href="portfolio_cn.html" class="current">项目</a></li>
+                    <li><a href="news_cn.html">新闻</a></li>
+                    <li class="last"><a href="resume_cn.html">简历</a></li>
                 </ul>    	
             
             </div> 
@@ -55,8 +81,11 @@
 </div>
 
 <div id="templatemo_top_wrapper">
-	<div id="templatemo_top">    
-   		<h2>Zoomin's Resume</h2>
+	<div id="templatemo_top">
+    
+   		<h2>项目</h2>
+        <p>本页详细列出了个人的项目和实习经历。</p>
+   
     </div>
 </div>
 
@@ -66,55 +95,16 @@
     	
         <div class="content_box_top"></div>
         <div class="content_box">
-        <h2>Intern</h2>
-        <p><em>2012 & 2014</em> &nbsp&nbsp&nbsp&nbsp&nbsp <strong><font color="yellow">Google open source, Liquid Galaxy, Remote</font></strong>
-          <br/>My GSoC project is to synchronize MultiScreen Views(2012 5000$) and merge Chinese Streetview into the system(2014 5500$).Mainly based on JS especially Node.js.</p>
-        <p><em>2012 - 2013</em> &nbsp&nbsp&nbsp&nbsp&nbsp <strong><font color="yellow">Baidu, LBS VA, Beijing</font></strong>
-          <br/>Automatic framework for analyzing the quality of ”Data On-line process” and satisfactory rate for users. Based on PHP and C++</p>
-		<p><em>2011 - 2012</em> &nbsp&nbsp&nbsp&nbsp&nbsp <strong><font color="yellow">Tencent, MIG, Chengdu</font></strong>
-          <br/>Mobile Device Web Service and Mobile softwares uploading system(checking software quality) for providers. Based on Java, JSP and JS</p>
-		<h2>Projects</h2>
-        <p><em>2014 - 2014</em> &nbsp&nbsp&nbsp&nbsp&nbsp <strong><font color="yellow">3D Synopsis</font></strong>
-          <br/> In this work, we propose a novel 3D route visualization tool, which aims to produce a trip synopsis of a prescribed
-          length that is as informative and interesting as possible. Including OSG(OPENGL),CGAL,OPENCV,ENGIEN and so on. To submit EuroGraph 2014</p>
-		<p><em>2013 - 2014</em> &nbsp&nbsp&nbsp&nbsp&nbsp <strong><font color="yellow">Intrinsic Symmetry</font></strong>
-          <br/>Enhancing the self-symmetry of a shape is of fundamental aesthetic virtue. In this work, we are interested in
-           recovering the aesthetics of intrinsic symmetries, where an asymmetric shape is symmetrized while keeping its general pose and perceived dynamics. Submitted on
-           Siggraph Asia 2014</p>
-		<p><em>2010 - 2011</em> &nbsp&nbsp&nbsp&nbsp&nbsp <strong><font color="yellow">National College Innovation Competition</font></strong>
-          <br/>Develop Smart Campus System with Zigbee-based Internet of Things technology , and received the National Award. Main parts: Resource Monitoring, Anti-Theft
-         ,Fire Preventing, Personnel Positioning and so on. Based on C/C++, ActionScript, Java and JS.
-         My job contains part of Web server, serial port communication, and ActionScript</p>
-		<p><em>2009 - 2010</em> &nbsp&nbsp&nbsp&nbsp&nbsp <strong><font color="yellow">College Sprout Fund Project</font></strong>
-          <br/>Online examination system for software academy of SCU, mainly related to web MVC architecture, MySQL, JAVA.</p>
-		    
-		<h2>Education</h2>
-        <p><em>2012 - 2015</em> &nbsp&nbsp&nbsp&nbsp&nbsp <strong><font color="yellow">Master</font></strong>
-          <br/>COMPUTER GRAPHICS    SIAT, Chinese Academy of Sciences,China</p>
-        <p><em>2008 - 2012</em> &nbsp&nbsp&nbsp&nbsp&nbsp <strong><font color="yellow">Bachelor</font></strong>
-          <br/>SOFTWARE ENGINEERING   GPA:3.63/4 TOP 2%  Sichuan Univeristy, China</p>
-		<h2>Award</h2>
-        <p>2013 – 2014 &nbsp&nbsp&nbsp  Dean Scholarship (TOP 3%)  SIAT, Chinese Academy of Sciences</p>
-        <p>2012 – 2013 &nbsp&nbsp&nbsp Excellent Student(No.4137198))&Excellent Student Cadre(No.3131027) Chinese Academy of Sciences</p>
-		
-		<p>2012 – 2013 &nbsp&nbsp&nbsp Elite of Software Academy (TOP 2%) Software Academy of SiChuan University</p>
-        <p>2012 – 2013 &nbsp&nbsp&nbsp Excellent Graduate Thesis (TOP 5%) SiChuan University</p>
-        <p>2011 – 2012 &nbsp&nbsp&nbsp Excellent Chairman of English Association English Association won the School Top Ten
-          during my term of service, SiChuan University</p>
-        <p>2011 – 2012 &nbsp&nbsp&nbsp Wisesoft Co.,Ltd Scholarship SiChuan University</p>
-        <p>2010 – 2011 &nbsp&nbsp&nbsp Second Prize in third National College Innovation Competition</p>
-        <p>2010 – 2011 &nbsp&nbsp&nbsp National Motivational Scholarship Ministry of Education,PRC</p>
-        <p>2009 – 2010 &nbsp&nbsp&nbsp National Scholarship Ministry of Education,PRC</p>
+        <div id="gallery"></div>   
+        </div>
+		<div class="content_box_bottom"></div>
 
-		<h2>Other</h2>
-        <p><strong><font color="yellow">*</font></strong> Incumbent Vice President of SIAT</p>
-        <p><strong><font color="yellow">*</font></strong> soul and feet, keep one on road</p>
-		
-       <div class="cleaner_h50"></div>
-       </div><div class="content_box_bottom"></div>
+	</div>
 
-      </div>
-    
+    <script type="text/javascript" src="js/htmlstr.js"></script>
+    <script type="text/javascript" src="js/split.js"></script>
+	<script type="text/javascript" >setpage(); //调用分页</script> 
+
 <div id="sidebar_wrapper">
 
 	<div class="sidebar_top"></div>
