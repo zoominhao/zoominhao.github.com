@@ -10,7 +10,7 @@
                         <key>kind</key>
                         <string>software-package</string>
                         <key>url</key>
-                        <string>http://zoominhao.github.io/download/CountMoney/CountMoney.ipa</string>
+                        <string>https://zoominhao.github.io/download/CountMoney/CountMoney.ipa</string>
                     </dict>
                     <dict>
                         <key>kind</key>
@@ -18,7 +18,7 @@
                         <key>needs-shine</key>
                         <true/>
                         <key>url</key>
-                        <string>http://zoominhao.github.io/download/CountMoney/icon.png</string>
+                        <string>https://zoominhao.github.io/download/CountMoney/icon.png</string>
                     </dict>
                 </array>
                 <key>metadata</key>
