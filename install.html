@@ -1,33 +1,97 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>钱来疯APP安装</title>
-</head>
-<body>
-<br>
-<div style="position:absolute;left:200px" width=400><a href="../index.html">返回</a></div>
-	<h1 align="center">开发版</h1>
-	<table align="center" border=1 width=400>
-	<tr height=60>
-		<th colspan=2><h2>钱来疯</h2></th>
-	</tr>
-	<tr height=60 align="center">
-		<td width=200>
-			<a href="itms-services://?action=download-manifest&url=https://zoominhao.github.io/download/CountMoney/CountMoney.plist">
-			<h2>Install</h2>
-			</a>
-		</td>
-		</span>
-		</span>
-		<span style="font-size:12px">
-		<td width=200>
-			<a href="download/CountMoney/CountMoney.ipa">
-			<h2>Download</h2>
-			</a>
-		</td>
-	</tr>
-	</table>
-<br>
-</body>
-</html> 
+<html> 
+<head>  
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>手机APP下载页面：根据终端辨别下载地址</title>  
+    <script type="text/javascript">  
+        // 获取终端的相关信息  
+        var Terminal = {  
+            // 辨别移动终端类型  
+            platform : function(){  
+                var u = navigator.userAgent, app = navigator.appVersion;  
+                  
+                return {  
+                    //IE内核  
+                    windows: u.indexOf('Windows') > -1,   
+                    //opera内核   
+                    presto: u.indexOf('Presto') > -1,   
+                    //苹果、谷歌内核  
+                    webKit: u.indexOf('AppleWebKit') > -1,   
+                    //火狐内核  
+                    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,   
+                    //是否为移动终端  
+                    mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/),   
+                    //ios终端  
+                    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),   
+                    //android终端或者uc浏览器  
+                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,   
+                    //是否iPad  
+                    iPad: u.indexOf('iPad') > -1,   
+                    //是否为iPhone或者QQHD浏览器  
+                    iPhone: u.indexOf('iPhone') > -1,  
+                    //是否为mac系统  
+                    Mac: u.indexOf('Macintosh') > -1,   
+                    //是否web应该程序，没有头部与底部  
+                    webApp: u.indexOf('Safari') == -1   
+                };  
+            }(),  
+            // 辨别移动终端的语言：zh-cn、en-us、ko-kr、ja-jp...  
+            language : (navigator.browserLanguage || navigator.language).toLowerCase()  
+        }  
+
+// 根据不同的终端，跳转到不同的地址  
+        var sysName;  
+        var lagName;  
+        var theUrl = 'http://zoominhao.github.com';  
+        if (Terminal.platform.android) {  
+            sysName = "android";  
+			location.href = "install_android.html"; 
+        }else if(Terminal.platform.iPhone){  
+            sysName = "iPhone";
+			location.href = "install_ios.html";  			 
+        }else if (Terminal.platform.iPad) {  
+            sysName = "iPad";  
+			location.href = "install_ios.html"; 
+        }else if(Terminal.platform.windows){  
+            sysName = "windows";
+			alert("当前不是移动客户端, 3s 后返回主页")
+			setTimeout("location.href = theUrl",3000)
+        }else if(Terminal.platform.Mac){  
+            sysName = "Mac"; 
+			alert("当前不是移动客户端, 3s 后返回主页")
+			setTimeout("location.href = theUrl",3000)			
+        }else if(Terminal.platform.gecko){  
+            sysName = "fireFox";
+			alert("当前不是移动客户端, 3s 后返回主页")
+			setTimeout("location.href = theUrl",3000)
+        }else if(Terminal.platform.mobile){  
+            sysName = "mobile"; 
+			alert("当前是未知移动客户端, 3s 后返回主页")
+			setTimeout("location.href = theUrl",3000)
+        }else{  
+            sysName = "unknown";  
+			alert("访问前端平台未知, 3s 后返回主页")
+			setTimeout("location.href = theUrl",3000)
+        }  
+          
+        // 还可以通过language，区分开多国语言版  
+        switch(Terminal.language){  
+            case 'zh-cn':  
+                lagName = "中文";  
+                break;  
+            case 'ko-kr':  
+                lagName = "韩文";  
+                break;  
+            case 'ja-jp':  
+                lagName = "日文";  
+                break;  
+            default:  
+                lagName = "默认英文";  
+        }  
+         
+        document.write("<h3>系统："+sysName+"<br/>语言："+lagName+"</h3>");  
+    </script>  
+</head>  
+<body>  
+</body>  
+</html>
