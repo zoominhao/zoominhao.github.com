@@ -6,7 +6,7 @@
         function onPlay(num, realurl){  
 				//var oTitle = parent.document.getElementById("screen").contentWindow.document.getElementById("title");
                 //var oWin = parent.document.getElementById("screen").contentWindow.document.getElementById("play");
-				var obj = parent.frames["screen"].window;
+				var obj = parent.frames["disscreen"].window;
 				var oTitle = obj.document.getElementById('title')
 				var oWin = obj.document.getElementById('play')
                 if (realurl.length>0){
@@ -22,7 +22,7 @@
 
 <frameset cols="25%,75%">
   <frame id="catalogue" name ="catalogue" src="hzw/catalogue.html" />
-  <frame id="screen" name="screen" src="hzw/screen.html" />
+  <frame id="disscreen" name="disscreen" src="hzw/screen.html" />
 </frameset>
 
 </html>
