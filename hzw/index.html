@@ -1,0 +1,28 @@
+<html>
+<head>
+
+<SCRIPT LANGUAGE="JavaScript">
+        <!--
+        function onPlay(num, realurl){  
+				//var oTitle = parent.document.getElementById("screen").contentWindow.document.getElementById("title");
+                //var oWin = parent.document.getElementById("screen").contentWindow.document.getElementById("play");
+				var obj = parent.frames["screen"].window;
+				var oTitle = obj.document.getElementById('title')
+				var oWin = obj.document.getElementById('play')
+                if (realurl.length>0){
+                        oWin.src="http://api.baiyug.cn/vip/index.php?url=" + realurl;
+						oTitle.innerHTML = "海贼王第" + num + "集";
+						
+                }
+        }
+
+  </SCRIPT>
+<title>    vip video free    </title>
+</head>
+
+<frameset cols="25%,75%">
+  <frame id="catalogue" name ="catalogue" src="hzw/catalogue.html" />
+  <frame id="screen" name="screen" src="hzw/screen.html" />
+</frameset>
+
+</html>

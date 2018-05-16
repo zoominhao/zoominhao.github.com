@@ -3,17 +3,15 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="http://static.qiyi.com/css/common/v3-basic/v3-basic_other.css"/>
 <link rel="stylesheet" type="text/css" href="http://static.qiyi.com/css/common/v3-album/album.css" >
+<script type="text/javascript" src="urls.js"></script>
 <SCRIPT LANGUAGE="JavaScript">
         <!--
         function onload(){
 			addItems()
         }
 
-        function onPlay(realurl){  
-                var oWin = document.getElementById("play");
-                if (realurl.length>0){
-                        oWin.src="http://api.baiyug.cn/vip/index.php?url=" + realurl;
-                }
+        function onPlay(num, realurl){  
+				top.onPlay(num, realurl)
         }
 		
 		function addElementLi(num, realurl) {
@@ -24,26 +22,28 @@
 
 　　　　//设置 li 属性，如 id
 　　　　li.setAttribute("class", "album_item");
-　　　　li.innerHTML = "<input type=\"button\" value=\"" + num + "\" onclick=\"onPlay('" + realurl +"')\">";
+　　　　//li.innerHTML = "<input type=\"button\" value=\"" + num + "\" onclick=\"onPlay('" + realurl +"')\">";
+			li.innerHTML = "<input type=\"button\" style=\"width:100px;height:40px;\" value=\"" + num + "\" onclick=\"onPlay(" + num + ",'" + realurl +"')\">";
+			//li.innerHTML = "<input type=\"button\" value=\"{0}\" onclick=\"onPlay('{1}')\">".format(num, realurl);
 　　　　ul.appendChild(li);
 　　}
 
 	 function addItems()
 	 {
-			var urls = ['http://www.iqiyi.com/v_19rrok7rvo.html', 'http://www.iqiyi.com/v_19rrok7u28.html'];
+			//var urls = ['http://www.iqiyi.com/v_19rrok7rvo.html', 'http://www.iqiyi.com/v_19rrok7u28.html'];
 			for(i = 0,len = urls.length; i < len; i++)
 			{
-				addElementLi(i, urls[i])
+				addElementLi(i + 1, urls[i])
 			}
 	 }
 	 
   </SCRIPT>
 <title>    vip video free    </title>
 </head>
-<body onload="onload()" bgcolor=#000000>
-<table  width="100%" align="center" height="100%" border="0" cellpadding="0" cellspacing="0">
+<body onload="onload()">
+<table  width="50%" align="center" height="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
-        <td height="9">
+        <td>
                 <div class="mod_album_lists">
 					<div data-tab-body="widget-tab-3" style="display: block;" data-seq="1" data-private-display="block">
                          <div data-widget="albumlist-render">
@@ -55,9 +55,7 @@
 				</div>
         </td>
 </tr>
-<tr>
-        <td><iframe src="" name="play" id="play" width="100%" align="center" height="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe></td>
-</tr>
+
 </table>
 </body>
 </html>
