@@ -24,13 +24,13 @@
                 <key>metadata</key>
                 <dict>
                     <key>bundle-identifier</key>
-                    <string>com.zoomin.www</string>
+                    <string>com.supercell.slash-ed</string>
                     <key>bundle-version</key>
                     <string>1.0</string>
                     <key>kind</key>
                     <string>software</string>
                     <key>title</key>
-                    <string>Slash</string>
+                    <string>Zoomin</string>
                 </dict>
             </dict>
         </array>
